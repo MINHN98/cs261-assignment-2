@@ -9,7 +9,7 @@ For this assignment, you are provided with some starter code that defines the st
 
 In this assignment, your work will be limited to the files `list_reverse.c`, `queue_from_stacks.c`, and `stack_from_queues.c`, where you will implement the functions described below. In addition to the descriptions below, there is thorough documentation in these files describing how each function should behave.
 
-## 1. Implement a function to reverse a linked list
+## 1. Implement a function to reverse a linked list in place
 
 In `link.h`, a simple structure implementing a link in a singly-linked list is defined.  For this part of the assignment, you will implement a function called `list_reverse()` that takes as an argument a single link structure representing the head of a linked list, reverses that list, and returns the new head of the reversed list.  This function is prototyped in `list_reverse.h`, and you will implement it in `list_reverse.c`.  **Importantly, you must perform the list reversal in place and may not allocate any new memory in this function.**
 
@@ -19,13 +19,15 @@ In the files `stack.h` and `stack.c`, a simple stack data structure is implement
 
 Importantly, you may only use the functions prototyped in `stack.h` to interface with your two stacks, and you may not access the underlying data directly.  Also, make sure your queue-from-stacks implementation does not have any memory leaks!
 
+> Hint: think of one stack as an "inbox" and one stack as an "outbox".
+
 ## 3. Implement a stack using two queues
 
 In the files `queue.h` and `queue.c`, a simple queue data structure is implemented.  For the third part of this assignment, you will use two instances of this queue data structure to implement a stack.  The interface of your stack-from-queues is defined in `stack_from_queues.h`, and you must complete each of the functions implementing the stack-from-queues in `stack_from_queues.c`.  Each of the functions in `stack_from_queues.c` has a function header comment that describes more precisely how it should behave.
 
 Importantly, you may only use the functions prototyped in `queue.h` to interface with your two queues, and you may not access the underlying data directly.  Also, make sure your stack-from-queues implementation does not have any memory leaks!
 
-Hint: there are two possible implementations of the queue-from-stacks, one with an expensive pop operation and an efficient push operation, and one with an expensive push operation and an efficient pop operation.
+> Hint: there are two possible implementations of the queue-from-stacks, one with an expensive pop operation and an efficient push operation, and one with an expensive push operation and an efficient pop operation.  Whichever of these you choose to implement, the key is knowing where in your two queues the most recently pushed element is.
 
 ## Testing your work
 
@@ -47,5 +49,5 @@ As always, we'll be using GitHub Classroom for this assignment, and you will sub
 The assignment is worth 100 total points, broken down as follows:
 
 * 20 points: `list_reverse()` works as described above
-* 40 points: all functions in your queue-from-stacks implementation work correctly
-* 40 points: all functions in your stack-from-queues implementation work correctly
+* 40 points: all functions in your queue-from-stacks implementation correctly implement a queue
+* 40 points: all functions in your stack-from-queues implementation correctly implement a stack
