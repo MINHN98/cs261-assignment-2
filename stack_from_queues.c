@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 
+#include "queue.h"
 #include "stack_from_queues.h"
 
 /*

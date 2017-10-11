@@ -20,6 +20,7 @@ struct stack {
 
 struct stack* stack_create() {
   struct stack* stack = malloc(sizeof(struct stack));
+  assert(stack);
   stack->top = NULL;
   return stack;
 }

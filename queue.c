@@ -22,6 +22,7 @@ struct queue {
 
 struct queue* queue_create() {
   struct queue* queue = malloc(sizeof(struct queue));
+  assert(queue);
   queue->head = NULL;
   queue->tail = NULL;
   return queue;
