@@ -41,7 +41,7 @@ void stack_from_queues_free(struct stack_from_queues* stack) {
  *     The function should exit the program with an error if stack is NULL.
  *
  * Return:
- *   Should return 0 if the stack is empty or 1 otherwise.
+ *   Should return 1 if the stack is empty or 0 otherwise.
  */
 int stack_from_queues_isempty(struct stack_from_queues* stack) {
   return 1;

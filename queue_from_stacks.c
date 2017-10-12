@@ -41,7 +41,7 @@ void queue_from_stacks_free(struct queue_from_stacks* queue) {
  *     The function should exit the program with an error if queue is NULL.
  *
  * Return:
- *   Should return 0 if the queue is empty or 1 otherwise.
+ *   Should return 1 if the queue is empty or 0 otherwise.
  */
 int queue_from_stacks_isempty(struct queue_from_stacks* queue) {
   return 1;
